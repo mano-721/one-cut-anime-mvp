@@ -1,0 +1,12 @@
+{
+  "name": "한 컷 애니",
+  "short_name": "한 컷 애니",
+  "description": "사진 한 장을 2D 애니메이션 이미지로 바꿔보세요.",
+  "lang": "ko",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f6f4ed",
+  "theme_color": "#f6f4ed",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

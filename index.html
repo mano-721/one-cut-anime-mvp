@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6f4ed">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="한 컷 애니">
+<meta name="description" content="아이폰으로 찍은 한 컷을 2D 애니메이션 이미지로 바꿔보세요.">
+<title>한 컷 애니 · 내 일상을 애니메이션으로</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<style>
+:root{--paper:#f6f4ed;--ink:#263e35;--muted:#6a756d;--accent:#f17458;--line:#dddcd2;--white:#fffdf8}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;word-break:keep-all;overflow-wrap:break-word;line-height:1.65}button,input{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:4px}button:disabled{cursor:wait;opacity:.6}[hidden]{display:none!important}.shell{max-width:1160px;margin:auto;padding:0 32px}header{display:flex;justify-content:space-between;align-items:center;height:100px;border-bottom:1px solid var(--line)}.brand{border:0;background:none;color:var(--ink);font-weight:850;font-size:23px;letter-spacing:-1px;display:flex;align-items:center;gap:10px}.brand-mark{width:29px;height:29px;border:2px solid var(--ink);border-radius:9px;display:grid;place-items:center;font-size:17px}.edition{font-size:12px;letter-spacing:2px;color:var(--muted)}main{min-height:calc(100svh - 179px)}.hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:70px;padding:72px 0 60px}.eyebrow{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:1.8px;margin-bottom:24px}.dot{width:7px;height:7px;background:var(--accent);border-radius:50%}h1{font-size:clamp(40px,5vw,64px);letter-spacing:-3px;line-height:1.2;margin:0 0 24px;font-weight:850}h1 em{font-style:normal;color:var(--accent)}.intro{font-size:17px;max-width:390px;color:var(--muted);margin:0 0 30px}.primary{border:0;border-radius:14px;background:var(--ink);color:white;padding:17px 25px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:56px}.primary .arrow{font-size:22px;line-height:1}.secondary{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:12px;padding:13px 20px;font-weight:650}.small{font-size:12px;color:var(--muted);margin-top:14px}.art{position:relative;padding:20px 10px 10px}.art-board{border-radius:160px 160px 28px 28px;background:#e4e9dd;position:relative;overflow:hidden;aspect-ratio:1/1.08;border:1px solid #d5dbcf}.art-board svg{width:100%;height:100%;display:block}.float-tag{position:absolute;bottom:32px;left:-10px;background:var(--white);padding:12px 19px;border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 25px #253c3510;font-size:13px;transform:rotate(-5deg)}.art-note{text-align:right;font-size:11px;color:var(--muted);margin:9px 4px}.spark{position:absolute;right:-4px;top:20px;font-size:55px;color:var(--accent)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding:26px 0 36px;border-top:1px solid var(--line)}.step{display:flex;gap:14px;align-items:flex-start}.num{font-family:Georgia,serif;font-style:italic;color:var(--accent);font-size:26px;line-height:1.4}.step strong{font-size:14px}.step p{margin:3px 0 0;color:var(--muted);font-size:12px}footer{border-top:1px solid var(--line);padding:23px 0;display:flex;justify-content:space-between;gap:15px;color:var(--muted);font-size:11px}.view{max-width:600px;margin:0 auto;padding:44px 0 60px}.back{border:0;padding:0;background:transparent;color:var(--muted);font-size:13px;margin-bottom:24px}.view h2{font-size:32px;line-height:1.35;letter-spacing:-1.2px;margin:12px 0}.view .description{color:var(--muted);font-size:15px;margin:0 0 24px}.upload{background:var(--white);border:1px dashed #b9c3b5;border-radius:22px;min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;text-align:center}.camera-icon{background:#e9eee2;border-radius:23px;padding:18px;margin-bottom:17px;font-size:36px;line-height:1}.upload p{font-size:13px;color:var(--muted);margin:12px 0 0}.notice{margin:16px 0 0;font-size:12px;color:var(--muted)}.photo-stage{position:relative;border-radius:22px;overflow:hidden;background:#e6eadf;border:1px solid var(--line)}.photo-stage img{display:block;width:100%;max-height:600px;object-fit:contain}.loading{position:absolute;inset:0;background:#f6f4ede8;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:25px;text-align:center}.spinner{width:36px;height:36px;border:3px solid #d3d9cc;border-top-color:var(--ink);border-radius:50%;animation:spin 1s linear infinite;margin-bottom:20px}@keyframes spin{to{transform:rotate(360deg)}}.loading p{font-size:14px;margin:0}.error{border:1px solid #e7c2b5;background:#fff1e9;border-radius:14px;padding:18px;margin-top:18px;font-size:14px}.error p{margin:0 0 12px}.actions{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}.actions .primary{width:100%}.result-tag{position:absolute;top:14px;left:14px;background:var(--white);border-radius:20px;padding:4px 12px;font-size:11px;font-weight:700}.field{margin-bottom:20px}label{display:block;font-weight:700;font-size:14px;margin-bottom:8px}input:not([type=file]){display:block;width:100%;border:1px solid var(--line);border-radius:12px;padding:15px;background:var(--white);font-size:16px;color:var(--ink)}form .primary{width:100%;margin-top:7px}.success{padding:45px 25px;background:var(--white);border:1px solid var(--line);border-radius:22px;text-align:center}.check{width:58px;height:58px;border-radius:50%;background:#e5eddf;margin:auto;display:grid;place-items:center;font-size:27px}.success h2{font-size:27px;margin:22px 0}.screen-step{color:var(--muted);font-size:11px;letter-spacing:1.5px}.inline-link{background:none;border:0;color:var(--ink);font-size:13px;text-decoration:underline;text-underline-offset:4px;padding:0;margin-top:20px}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.full{width:100%}@media(max-width:760px){.shell{padding:0 22px}header{height:77px}.brand{font-size:20px}.edition{font-size:10px;letter-spacing:1px}.hero{grid-template-columns:1fr;gap:24px;padding:38px 0 32px}.eyebrow{margin-bottom:18px}h1{font-size:44px;letter-spacing:-2px}.intro{font-size:15px;margin-bottom:23px;max-width:100%}.hero .primary{width:100%}.art{max-width:400px;width:100%;margin:auto;padding:16px 10px 0}.art-board{aspect-ratio:1.15/1}.float-tag{left:0;bottom:30px;padding:9px 14px}.spark{font-size:42px;right:1px;top:1px}.steps{gap:16px;padding:22px 0 28px}.step{flex-direction:column;gap:4px}.step strong{font-size:13px}.step p{font-size:11px}.num{font-size:22px}footer{font-size:10px;padding-bottom:max(22px,env(safe-area-inset-bottom))}.view{padding:28px 0 40px}.view h2{font-size:28px}.upload{min-height:280px;padding:24px}.primary{padding:16px 20px}.view .description{font-size:14px}}@media(prefers-reduced-motion:reduce){.spinner{animation:none}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header><button class="brand" id="homeButton" aria-label="한 컷 애니 첫 화면"><span class="brand-mark" aria-hidden="true">✦</span> 한 컷 애니</button><span class="edition">YOUR DAILY ANIME</span></header>
+<main>
+<section id="home" aria-labelledby="heroTitle">
+<div class="hero"><div><div class="eyebrow"><span class="dot"></span> 평범한 순간에, 작은 상상</div><h1 id="heroTitle">내 일상이<br><em>애니메이션</em>이<br>되는 순간.</h1><p class="intro">사진으로 가볍게 놀고 싶은 20~30대를 위해, 아이폰으로 찍은 한 컷을 바로 2D 애니메이션 이미지로 바꿔드려요.</p><button class="primary" id="start">내 사진 바꿔보기 <span class="arrow" aria-hidden="true">↗</span></button><p class="small">가입 없이, 복잡한 설명 없이. 사진 한 장이면 돼요.</p></div>
+<div class="art"><div class="art-board"><svg viewBox="0 0 440 470" role="img" aria-label="푸른 하늘 아래 카메라를 든 인물의 2D 일러스트"><rect width="440" height="470" fill="#dce8df"/><circle cx="336" cy="98" r="44" fill="#fff4cb"/><path d="M0 255 Q95 153 218 220 T440 180 V470 H0Z" fill="#b6ccb5"/><path d="M0 310 Q145 243 261 283 T440 256 V470 H0Z" fill="#91ad93"/><path d="M0 345 Q145 300 440 347V470H0Z" fill="#f0dbb0"/><path d="M35 96 Q63 72 92 96 Q126 73 149 99" stroke="#fffdf2" stroke-width="14" stroke-linecap="round" fill="none"/><path d="M293 174 Q320 151 350 174" stroke="#fffdf2" stroke-width="10" stroke-linecap="round" fill="none"/><g stroke="#304739" stroke-width="3" stroke-linejoin="round"><path d="M116 470 L125 335 Q129 300 169 290 H267 Q310 303 321 343 L337 470Z" fill="#f07757"/><path d="M165 294 L218 348 L272 294" fill="#fce7bd"/><path d="M193 257 V303 Q216 328 241 303 V256" fill="#e9b48e"/><path d="M156 180 Q143 240 175 265 Q220 304 259 266 Q292 232 274 173Z" fill="#f5cba1"/><path d="M147 206 Q130 134 177 114 Q212 86 252 122 Q300 133 286 205 L263 188 L249 153 Q219 177 168 170 L165 212Z" fill="#304739"/><path d="M179 222 Q186 216 195 222 M235 222 Q244 216 250 222" fill="none" stroke-linecap="round"/><path d="M208 250 Q221 259 234 248" fill="none" stroke-linecap="round"/><path d="M124 354 Q107 320 129 308 L166 328 L184 359 L163 382Z" fill="#f5cba1"/><path d="M306 355 Q320 317 299 309 L269 329 L248 359 L272 382Z" fill="#f5cba1"/><rect x="161" y="311" width="109" height="73" rx="13" fill="#f7f2e7"/><path d="M175 310 V301 H204 V311" fill="#f7f2e7"/><circle cx="222" cy="347" r="26" fill="#304739"/><circle cx="222" cy="347" r="17" fill="#77978b"/><circle cx="217" cy="341" r="5" fill="#dae6d9" stroke="none"/><rect x="172" y="322" width="13" height="8" rx="2" fill="#f07757" stroke="none"/><path d="M124 400 L161 382 M308 399 L272 382" fill="none"/></g><path d="M45 387 L52 365 L59 387 L80 394 L59 401 L52 423 L45 401 L24 394Z" fill="#fff7d7"/><path d="M367 253 L372 238 L377 253 L392 258 L377 263 L372 278 L367 263 L352 258Z" fill="#fff7d7"/></svg></div><span class="spark" aria-hidden="true">✳</span><div class="float-tag">한 컷이면, 다른 세상 ✨</div><div class="art-note">서비스 분위기를 보여주는 일러스트예요.</div></div></div>
+<div class="steps"><div class="step"><span class="num">01</span><div><strong>사진 한 장 찍고</strong><p>지금 이 순간을 담아요.</p></div></div><div class="step"><span class="num">02</span><div><strong>잠깐만 기다리면</strong><p>AI가 알아서 바꿔줘요.</p></div></div><div class="step"><span class="num">03</span><div><strong>새로운 나를 발견</strong><p>애니 속 한 장면처럼.</p></div></div></div>
+</section>
+<section id="feature" class="view" hidden aria-labelledby="featureTitle"><button class="back" data-view="home">← 처음으로</button><div class="screen-step">02 / 한 컷 바꾸기</div><h2 id="featureTitle" tabindex="-1">사진 한 장 찍어볼까요?</h2><p class="description">찍기만 하면 2D 애니메이션 이미지로 바뀌어요.<br>원하는 분위기를 따로 적을 필요 없어요.</p><div id="upload" class="upload"><div class="camera-icon" aria-hidden="true">◎</div><button id="capture" class="primary">사진 찍기 <span aria-hidden="true">↗</span></button><p>휴대전화에서는 카메라로,<br>컴퓨터에서는 사진을 골라주세요.</p></div><input id="photo" type="file" accept="image/*" capture="environment" class="sr-only" tabindex="-1" aria-label="변환할 사진 선택"><div id="stage" class="photo-stage" hidden><img id="preview" alt="선택한 원본 사진"><span id="resultTag" class="result-tag" hidden>2D ANIME</span><div id="loading" class="loading" hidden role="status"><span class="spinner" aria-hidden="true"></span><p>사진을 애니메이션 이미지로 바꾸고 있어요.<br>잠깐만 기다려주세요.</p></div></div><div id="error" class="error" role="alert" hidden><p id="errorText"></p><button id="retry" class="secondary">다시 시도하기</button></div><p class="notice" id="photoNotice">변환을 위해 선택한 사진이 Google Gemini로 전송돼요.</p><div id="resultActions" class="actions" hidden><button class="primary" data-view="apply">정식 버전 나오면 알려주세요 <span aria-hidden="true">↗</span></button></div><button class="inline-link" data-view="apply" id="earlyApply">정식 버전 소식 먼저 받기</button></section>
+<section id="apply" class="view" hidden aria-labelledby="applyTitle"><button class="back" data-view="feature">← 이미지 화면으로</button><div class="screen-step">03 / 다음 이야기도 함께</div><div id="applyContent"><h2 id="applyTitle" tabindex="-1">정식 버전도 써보고 싶나요?</h2><p class="description">이름과 이메일을 남겨주세요.<br>더 재밌어진 한 컷 애니를 가장 먼저 만나보세요.</p><form id="application"><div class="field"><label for="name">이름</label><input id="name" name="name" autocomplete="name" placeholder="어떻게 불러드릴까요?" required maxlength="60"></div><div class="field"><label for="email">이메일</label><input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="소식 받을 이메일을 적어주세요" required maxlength="254"></div><button type="submit" class="primary">출시 소식 받기 <span aria-hidden="true">↗</span></button><p class="small">지금은 신청 화면만 체험할 수 있어요. 입력한 정보는 저장되지 않아요.</p></form></div><div id="success" class="success" hidden role="status"><div class="check" aria-hidden="true">✓</div><h2 tabindex="-1" id="successTitle">신청됐습니다</h2><button class="secondary" data-view="feature">내 이미지 다시 보기</button></div></section>
+</main><footer><span>한 컷 애니 · 일상에 상상을 더해요.</span><span>MADE FOR YOUR MOMENTS</span></footer>
+</div>
+<script>
+const $ = id => document.getElementById(id);
+let imageData = null, busy = false;
+function showView(view){
+  ['home','feature','apply'].forEach(id=>$(id).hidden=id!==view);
+  window.scrollTo({top:0,behavior:'instant'});
+  const heading = $(view).querySelector('h1,h2');
+  if(heading){heading.setAttribute('tabindex','-1');heading.focus({preventScroll:true});}
+}
+$('start').addEventListener('click',()=>showView('feature'));
+$('homeButton').addEventListener('click',()=>showView('home'));
+document.querySelectorAll('[data-view]').forEach(button=>button.addEventListener('click',()=>showView(button.dataset.view)));
+$('capture').addEventListener('click',()=>{if(!busy)$('photo').click();});
+function showError(message){$('errorText').textContent=message;$('error').hidden=false;$('retry').hidden=!imageData;}
+async function prepareImage(file){
+  if(!file.type.startsWith('image/'))throw new Error('이미지 파일을 골라주세요.');
+  if(file.size>25*1024*1024)throw new Error('사진이 너무 커요. 25MB 이하 사진을 골라주세요.');
+  const url=URL.createObjectURL(file);
+  try{
+    const image=new Image();image.src=url;
+    await new Promise((resolve,reject)=>{image.onload=resolve;image.onerror=()=>reject(new Error('사진을 읽지 못했어요. JPEG 또는 PNG 사진을 골라주세요.'));});
+    const scale=Math.min(1,1536/Math.max(image.naturalWidth,image.naturalHeight));
+    const canvas=document.createElement('canvas');canvas.width=Math.round(image.naturalWidth*scale);canvas.height=Math.round(image.naturalHeight*scale);
+    const context=canvas.getContext('2d');context.fillStyle='#ffffff';context.fillRect(0,0,canvas.width,canvas.height);context.drawImage(image,0,0,canvas.width,canvas.height);
+    return canvas.toDataURL('image/jpeg',.85);
+  }finally{URL.revokeObjectURL(url);}
+}
+$('photo').addEventListener('change',async event=>{
+  const file=event.target.files[0];if(!file||busy)return;
+  imageData=null;$('error').hidden=true;
+  try{imageData=await prepareImage(file);$('preview').src=imageData;$('preview').alt='선택한 원본 사진';$('upload').hidden=true;$('stage').hidden=false;await generate();}
+  catch(error){showError(error.message);}
+  finally{event.target.value='';}
+});
+async function generate(){
+  if(!imageData||busy)return;
+  busy=true;$('loading').hidden=false;$('error').hidden=true;$('resultTag').hidden=true;$('resultActions').hidden=true;$('earlyApply').hidden=true;$('retry').disabled=true;
+  $('featureTitle').textContent='한 컷이 바뀌고 있어요';
+  const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),120000);
+  try{
+    const response=await fetch('/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({image:imageData.split(',')[1],mimeType:'image/jpeg'}),signal:controller.signal});
+    let data;try{data=await response.json();}catch{throw new Error('AI 연결을 확인하지 못했어요. Vercel에서 실행한 뒤 다시 시도해주세요.');}
+    if(!response.ok)throw new Error(data.error||'사진을 바꾸지 못했어요. 한 번 더 해볼까요?');
+    if(!data.image||!/^image\/(png|jpeg|webp)$/.test(data.mimeType))throw new Error('변환된 이미지가 도착하지 않았어요. 다시 시도해주세요.');
+    $('preview').src=`data:${data.mimeType};base64,${data.image}`;$('preview').alt='내 사진을 2D 애니메이션 스타일로 변환한 이미지';
+    $('featureTitle').textContent='내 사진, 이렇게 바뀌었어요!';$('resultTag').hidden=false;$('resultActions').hidden=false;$('photoNotice').textContent='평범한 한 컷이 애니 속 한 장면이 됐어요.';
+  }catch(error){$('featureTitle').textContent='조금만 더 기다려주세요';showError(error.name==='AbortError'?'변환 시간이 길어지고 있어요. 잠시 후 다시 시도해주세요.':error.message);$('earlyApply').hidden=false;}
+  finally{clearTimeout(timer);busy=false;$('loading').hidden=true;$('retry').disabled=false;}
+}
+$('retry').addEventListener('click',generate);
+$('application').addEventListener('submit',event=>{
+  event.preventDefault();
+  if(!$('name').value.trim()){$('name').setCustomValidity('이름을 적어주세요.');$('name').reportValidity();return;}
+  if(!$('application').reportValidity())return;
+  $('application').reset();$('applyContent').hidden=true;$('success').hidden=false;$('successTitle').focus();
+});
+$('name').addEventListener('input',()=>$('name').setCustomValidity(''));
+if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catch(()=>{});}
+</script>
+</body>
+</html>

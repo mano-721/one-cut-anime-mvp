@@ -1,0 +1,18 @@
+{
+  "name": "one-cut-anime-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "allowScripts": {
+    "supabase": true
+  },
+  "description": "한 컷 애니 모바일 PWA MVP",
+  "scripts": {
+    "preview": "node .preview.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "supabase": "^2.120.0"
+  }
+}

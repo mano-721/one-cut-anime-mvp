@@ -1,0 +1,11 @@
+node_modules/
+.vercel/
+.env
+.env.*
+!.env.example
+supabase/.temp/
+supabase/.branches/
+.preview.cjs
+진행기록.md
+*.pem
+*.key
